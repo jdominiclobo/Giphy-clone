@@ -27,6 +27,9 @@ const SearchGifs = () => {
           setGifType("");
         } else {
           setMessage("No GIF's found");
+          setTimeout(() => {
+            setMessage("");
+          }, 2000);
         }
       })
       .catch((error) => {
