@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { GiFastForwardButton } from "react-icons/gi";
+import { FaSearchengin } from "react-icons/fa";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -10,9 +11,11 @@ const Navbar = () => {
       <Link to="/" className="title">
         Giphy
       </Link>
-      {/* <div className="links" style={{ alignItems: "stretch" }}>
-        <Link to="/trending">Trending</Link>
-      </div> */}
+      <div className="links">
+        <Link to="/search">
+          <FaSearchengin /> Search
+        </Link>
+      </div>
     </nav>
   );
 };

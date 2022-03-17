@@ -3,8 +3,7 @@
   height: 90px;
   width: 100%;
   display: flex;
-  /* flex-wrap: wrap;
-  align-items: center; */
+  flex-direction: row;
   position: sticky;
   top: 0;
   z-index: 1;
@@ -13,4 +12,34 @@
 .title {
   padding-left: 1rem;
   font-size: 3rem;
+}
+
+.links {
+  margin-left: 3rem;
+  font-size: 2rem;
+}
+
+/* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+@media (max-width: 320px) {
+  .title {
+    font-size: 2rem;
+  }
+  .links {
+    font-size: 1rem;
+  }
+}
+/* smartphones, Android phones, landscape iPhone */
+@media (max-width: 480px) {
+  .title {
+    font-size: 2rem;
+  }
+  .links {
+    font-size: 1rem;
+  }
+}
+/* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+@media (max-width: 600px) {
+}
+/* tablet, landscape iPad, lo-res laptops ands desktops */
+@media (max-width: 801px) {
 }

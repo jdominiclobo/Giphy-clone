@@ -1,38 +1,62 @@
 .searchGifs {
   margin-top: 30px;
-  display: flexbox;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
 .input {
-  margin-left: 25%;
-  /* display: flex; */
   width: 40%;
+  display: flex;
+  flex-direction: column;
   font-size: 2rem;
   font-style: oblique;
   color: black;
-  /* font-display: inherit; */
+  border: 2px solid black;
+  border-radius: 5px;
 }
 
 .button {
   width: 10%;
+  margin-top: 10px;
   font-size: 2rem;
   font-style: oblique;
   color: black;
+  border: 1px solid black;
+  border-style: outset 2px black;
+  cursor: pointer;
 }
 
 .gifContainer {
+  margin-top: 30px;
   display: flexbox;
-  margin-left: 3.5rem;
   flex-wrap: wrap;
-  /* width: inherit; */
-  /* padding-left: 4rem; */
   flex-flow: row wrap;
-  justify-content: space-evenly;
   align-items: center;
 }
 
 .message {
   color: black;
   justify-content: center;
+}
+
+/* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+@media (max-width: 320px) {
+  .input {
+    font-size: 1rem;
+  }
+  .button {
+    font-size: 1rem;
+  }
+}
+/* smartphones, Android phones, landscape iPhone */
+@media (max-width: 480px) {
+  .input {
+    width: 50%;
+    font-size: 1rem;
+  }
+  .button {
+    width: 20%;
+    font-size: 1rem;
+  }
 }

@@ -16,7 +16,7 @@ const SearchGifs = () => {
     console.log("searching");
     axios
       .get(
-        `https://api.giphy.com/v1/gifs/search?api_key=${process.env.REACT_APP_API_KEY}&q=${gifType}&limit=30&offset=0&rating=pg&lang=en`
+        `https://api.giphy.com/v1/gifs/search?api_key=${process.env.REACT_APP_API_KEY}&q=${gifType}&limit=100&offset=0&rating=pg&lang=en`
       )
       .then((response) => {
         // console.log(response.data.data);

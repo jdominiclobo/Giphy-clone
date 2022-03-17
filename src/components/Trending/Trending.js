@@ -8,7 +8,7 @@ const TrendingGifs = () => {
   useEffect(() => {
     axios
       .get(
-        `https://api.giphy.com/v1/gifs/trending?api_key=${process.env.REACT_APP_API_KEY}&limit=30&rating=pg`
+        `https://api.giphy.com/v1/gifs/trending?api_key=${process.env.REACT_APP_API_KEY}&limit=100&rating=pg`
       )
       .then((response) => {
         console.log(response.data.data);
@@ -22,9 +22,7 @@ const TrendingGifs = () => {
 
   return (
     <div className="trendingContainer">
-      <h2 className="pageTitle" style={{ justifyContent: "center" }}>
-        Trending GIFs
-      </h2>
+      <h2 className="pageTitle">Trending GIFs</h2>
       <div className="gifContainer">
         {gifs.map((gif) => {
           return (

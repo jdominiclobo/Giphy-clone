@@ -1,3 +1,4 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import SearchGifs from "./components/Search/Search";
@@ -7,8 +8,11 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <SearchGifs />
-      <TrendingGifs />
+
+      <Routes>
+        <Route path="/" element={<TrendingGifs />} />
+        <Route path="/search" element={<SearchGifs />} />
+      </Routes>
     </div>
   );
 }
