@@ -37,6 +37,13 @@ const SearchGifs = () => {
       });
   };
 
+  const handleKeypress = (e) => {
+    //it triggers by pressing the enter key
+    if (e.keyCode === 13) {
+      handleSubmit();
+    }
+  };
+
   return (
     <div className="searchGifs">
       <input
@@ -44,6 +51,7 @@ const SearchGifs = () => {
         type="text"
         placeholder="search for gifs"
         onChange={handleChange}
+        onKeyDown={handleKeypress}
       />
       <button className="button" type="button" onClick={handleSubmit}>
         Go
