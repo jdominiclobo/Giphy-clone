@@ -23,7 +23,7 @@
   font-style: oblique;
   color: black;
   border: 1px solid black;
-  border-style: outset 2px black;
+  /* border-style: outset 0px 2px 2px 0px black; */
   cursor: pointer;
 }
 
