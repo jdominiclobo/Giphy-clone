@@ -1,11 +1,13 @@
 import axios from "axios";
 import React, { useState } from "react";
 import "./Search.css";
+import ClipLoader from "react-spinners/ClipLoader";
 
 const SearchGifs = () => {
   const [gifType, setGifType] = useState("");
   const [gifs, setGifs] = useState([]);
   const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     e.preventDefault();
@@ -13,13 +15,12 @@ const SearchGifs = () => {
   };
 
   const handleSubmit = () => {
-    console.log("searching");
+    setLoading(true);
     axios
       .get(
         `https://api.giphy.com/v1/gifs/search?api_key=${process.env.REACT_APP_API_KEY}&q=${gifType}&limit=100&offset=0&rating=pg&lang=en`
       )
       .then((response) => {
-        // console.log(response.data.data);
         const result = response.data.data;
         if (result.length > 0) {
           setMessage(`Showing ${gifType} Gif's`);
